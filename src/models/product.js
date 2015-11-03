@@ -19,6 +19,7 @@ App.Models.Product = Backbone.Model.extend({
   }
 });
 
+
 module.exports = App.Models.User;
 
 
