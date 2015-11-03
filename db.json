@@ -17,23 +17,23 @@
     {
       "id": 1,
       "userId": 1,
-      "title": "TBD",
-      "description": "TBD",
-      "img": "images/null.png"
+      "title": null,
+      "description": null,
+      "img": null
     },
     {
       "id": 2,
       "userId": 2,
-      "title": "TBD",
-      "description": "TBD",
-      "img": "images/null.png"
+      "title": null,
+      "description": null,
+      "img": null
     },
     {
       "id": 3,
       "userId": 1,
-      "title": "TBD",
-      "description": "TBD",
-      "img": "images/null.png"
+      "title": null,
+      "description": null,
+      "img": null
     }
   ]
 }
