@@ -66,7 +66,7 @@ App.Router = Backbone.Router.extend({
     var product = productsCollection.get(id);
 
       product.destory().done(function (product) {
-        App.router.navigate('/products(/)', { trigger: true })
+        App.router.navigate('/', { trigger: true })
       })
   },
 
