@@ -22,9 +22,15 @@
     },
     {
       "id": 2,
-      "title": "title",
-      "description": "something",
+      "title": "treebot",
+      "description": "I do landscaping",
       "img": "http://robohash.org/14eb93affdf.png"
+    },
+    {
+      "title": "jujubot",
+      "description": "I give good juju",
+      "img": "http://robohash.org/150d48933ff.png",
+      "id": 3
     }
   ]
 }
