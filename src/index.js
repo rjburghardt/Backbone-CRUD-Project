@@ -31,6 +31,7 @@ App.Router = Backbone.Router.extend({
     'user/:id/edit(/)': 'addUser',
     'user/:id/delete(/)': 'deleteUser',
     'products(/)': 'showProducts',
+    'products/:id/edit(/)': 'addProduct',
     'products/:id/delete(/)': 'deleteProduct',
     'products/add(/)': 'addProduct',
     '*actions': 'defaultRoute'
@@ -65,9 +66,11 @@ App.Router = Backbone.Router.extend({
   deleteProduct: function(id) {
     var product = productsCollection.get(id);
 
-      product.destory().done(function (product) {
-        App.router.navigate('/', { trigger: true })
-      })
+    console.log(product);
+
+    product.destroy().done(function (product) {
+      App.router.navigate('/', { trigger: true })
+    })
   },
 
   defaultRoute: function(actions) {

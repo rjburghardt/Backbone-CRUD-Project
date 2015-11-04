@@ -8,7 +8,7 @@ var formTemplate = require('../templates/product-form.hbs');
 *****************************************/
 
 var App = require('../app');
-var product = require('../models/product');
+var Product = require('../models/product');
 
 /****************************************
   View: Product Form
@@ -57,7 +57,7 @@ var ProductFormView = Backbone.View.extend({
 
       App.Collections.products.create(formData, {
         success: function (product) {
-          App.router.navigate('/', { trigger: true });
+          App.router.navigate('/products', { trigger: true });
         }
       });
 
@@ -65,7 +65,7 @@ var ProductFormView = Backbone.View.extend({
     } else {
       this.product.set(formData);
       this.product.save().done(function () {
-        App.router.navigate('/', { trigger: true });
+        App.router.navigate('/products', { trigger: true });
       });
     }
 
