@@ -49,7 +49,7 @@ var ProductFormView = Backbone.View.extend({
       description: $('form.product input[name="description"]').val()
     };
 
-    // Add Mode (Create User)
+    // Add Mode (Create Product)
     if (!this.editMode) {
 
       // Only set the image on add mode
