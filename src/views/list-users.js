@@ -13,6 +13,15 @@ var ListUsers = Backbone.View.extend({
 
   collection: App.Collections.user,
 
+  events: {
+    "click #user": "getUserId"
+  },
+
+  getUserId: function () {
+    var _this = this;
+    console.log(this.id)
+  }
+
   render: function () {
     var _this = this;
     var userCollection = this.collection;
