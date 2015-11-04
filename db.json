@@ -11,6 +11,12 @@
       "name": "Kevin",
       "hobby": "Beard Growing",
       "img": "http://robohash.org/14eb93afa4d.png"
+    },
+    {
+      "name": "New User",
+      "hobby": "Making new things",
+      "img": "http://robohash.org/150d45beb4c.png",
+      "id": 3
     }
   ],
   "products": [
