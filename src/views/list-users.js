@@ -14,12 +14,13 @@ var ListUsers = Backbone.View.extend({
   collection: App.Collections.user,
 
   events: {
-    "click #user": "getUserId"
+    "click img": "getUserId"
   },
 
-  getUserId: function () {
-    var _this = this;
-    console.log(this.id)
+  getUserId: function (event) {
+    var $target = $(event.currentTarget)
+    console.log($target.parents('tr').data('id'));
+    return false
   },
 
   render: function () {
