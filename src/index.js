@@ -61,6 +61,14 @@ App.Router = Backbone.Router.extend({
     App.Views.ProductForm.render(id)
   },
 
+  deleteProduct: function(id) {
+    var product = productsCollection.get(id);
+
+      product.destory().done(function (product) {
+        App.router.navigate('/products(/)', { trigger: true })
+      })
+  },
+
   defaultRoute: function(actions) {
     console.log('404');
   }
