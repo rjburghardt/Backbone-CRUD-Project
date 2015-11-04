@@ -19,7 +19,7 @@ var ListUsers = Backbone.View.extend({
 
   getUserId: function (event) {
     var $target = $(event.currentTarget)
-    console.log($target.parents('tr').data('id'));
+    $target.parents('tr').data('id')
     return false
   },
 
