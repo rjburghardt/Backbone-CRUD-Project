@@ -20,7 +20,7 @@ App.Models.Product = Backbone.Model.extend({
 });
 
 
-module.exports = App.Models.product;
+module.exports = App.Models.Product;
 
 
 
