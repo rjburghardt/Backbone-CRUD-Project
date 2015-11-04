@@ -8,7 +8,7 @@ var formTemplate = require('../templates/product-form.hbs');
 *****************************************/
 
 var App = require('../app');
-var User = require('../models/product');
+var product = require('../models/product');
 
 /****************************************
   View: Product Form
@@ -74,4 +74,4 @@ var ProductFormView = Backbone.View.extend({
   }
 });
 
-module.exports = UserFormView;
+module.exports = ProductFormView;
