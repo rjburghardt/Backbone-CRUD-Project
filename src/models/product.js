@@ -19,12 +19,9 @@ App.Models.Product = Backbone.Model.extend({
   }
 });
 
-<<<<<<< HEAD
 
-module.exports = App.Models.User;
-=======
 module.exports = App.Models.product;
->>>>>>> fdec27c34f98a63980fec9c75cc5fc8f50301c70
+
 
 
 
