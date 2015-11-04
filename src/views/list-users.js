@@ -20,7 +20,6 @@ var ListUsers = Backbone.View.extend({
   getUserId: function (event) {
     var $target = $(event.currentTarget)
     var userId = ($target.parents('tr').data('id'));
-    $target.parent('a').attr('href', '"#/user/' + userId + '/products"')
     return false
   },
 
