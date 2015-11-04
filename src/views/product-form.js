@@ -49,13 +49,13 @@ var ProductFormView = Backbone.View.extend({
       description: $('form.product input[name="description"]').val()
     };
 
-    // Add Mode (Create User)
+    // Add Mode (Create Product)
     if (!this.editMode) {
 
       // Only set the image on add mode
       formData.img = 'http://robohash.org/'+ Date.now().toString(16) + '.png'
 
-      App.Collections.product.create(formData, {
+      App.Collections.products.create(formData, {
         success: function (product) {
           App.router.navigate('/', { trigger: true });
         }
