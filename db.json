@@ -19,21 +19,21 @@
       "userId": 1,
       "title": "something",
       "description": "something",
-      "img": "something"
+      "img": "http://robohash.org/3e5d35e3423.png"
     },
     {
       "id": 2,
       "userId": 2,
       "title": "something",
       "description": "something",
-      "img": "something"
+      "img": "http://robohash.org/14eb93affdf.png"
     },
     {
       "id": 3,
       "userId": 1,
       "title": "something",
       "description": "something",
-      "img": "something"
+      "img": "http://robohash.org/14ab93bfc4d.png"
     }
   ]
 }

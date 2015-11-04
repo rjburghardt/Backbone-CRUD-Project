@@ -38,7 +38,6 @@ App.Router = Backbone.Router.extend({
 
   index: function() {
     App.Views.ListUsers.render();
-    App.Views.ProductList.render();
   },
 
   addUser: function(id) {
