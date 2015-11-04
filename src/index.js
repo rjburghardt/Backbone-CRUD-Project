@@ -30,7 +30,7 @@ App.Router = Backbone.Router.extend({
     'user/add(/)': 'addUser',
     'user/:id/edit(/)': 'addUser',
     'user/:id/delete(/)': 'deleteUser',
-    'product/add': 'addProduct',
+    'product/add(/)': 'addProduct',
     '*actions': 'defaultRoute'
   },
 
