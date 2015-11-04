@@ -16,7 +16,6 @@ var ProductCollection = Backbone.Collection.extend({
   model: Product
 });
 
-console.log(Product);
 
 App.Collections.products = new ProductCollection;
 
