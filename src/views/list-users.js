@@ -20,7 +20,7 @@ var ListUsers = Backbone.View.extend({
   getUserId: function () {
     var _this = this;
     console.log(this.id)
-  }
+  },
 
   render: function () {
     var _this = this;
