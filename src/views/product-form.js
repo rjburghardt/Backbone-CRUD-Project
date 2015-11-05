@@ -29,7 +29,7 @@ var ProductFormView = Backbone.View.extend({
 
     // Display form in Update Mode
     } else {
-      var product = this.product = new Product({ id: productId });
+      var product = this.product = new Product({ id: productId, userId: userId });
 
       product.fetch().done(function () {
         var output = formTemplate(product.toJSON());
@@ -46,7 +46,8 @@ var ProductFormView = Backbone.View.extend({
     // Collect Form Data
     var formData = {
       title: $('form.product input[name="title"]').val(),
-      description: $('form.product input[name="description"]').val()
+      description: $('form.product input[name="description"]').val(),
+      userId: $('')
     };
 
     // Add Mode (Create Product)

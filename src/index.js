@@ -61,7 +61,7 @@ App.Router = Backbone.Router.extend({
   },
 
   addProduct: function(id, userId) {
-    App.Views.ProductForm.render(id)
+    App.Views.ProductForm.render(id, userId)
   },
 
   deleteProduct: function(id) {
