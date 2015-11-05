@@ -31,10 +31,10 @@ App.Router = Backbone.Router.extend({
     'user/:id/edit(/)': 'addUser',
     'user/:id/delete(/)': 'deleteUser',
     'products(/)': 'showProducts',
-    'products/:id/edit(/)': 'addProduct',
     'products/:id/delete(/)': 'deleteProduct',
     'products/add(/)': 'addProduct',
     'user/:id/products(/)': 'showUserProducts',
+    'user/:id/products/add': 'addProduct',
     '*actions': 'defaultRoute'
   },
 
@@ -60,7 +60,7 @@ App.Router = Backbone.Router.extend({
     App.Views.ProductList.render()
   },
 
-  addProduct: function(id) {
+  addProduct: function(id, userId) {
     App.Views.ProductForm.render(id)
   },
 
