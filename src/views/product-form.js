@@ -18,9 +18,9 @@ var ProductFormView = Backbone.View.extend({
   el: $("main"),
   editMode: false,
 
-  render: function (userId, productId) {
+  render: function (productId, userId) {
     var _this = this;
-    this.editMode = !!productId;
+    this.editMode = !!productId && !!userId;
 
     // Display form in Create Mode
     if (!this.editMode) {

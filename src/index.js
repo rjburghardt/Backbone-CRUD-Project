@@ -33,6 +33,7 @@ App.Router = Backbone.Router.extend({
     'products(/)': 'showProducts',
     'user/:userId/products/:id/edit(/)': 'addProduct',
     'products/:id/delete(/)': 'deleteProduct',
+    'products/add(/)': 'addProduct',
     'user/:id/products(/)': 'showUserProducts',
     'user/:id/products/add': 'addProduct',
     '*actions': 'defaultRoute'
@@ -60,8 +61,8 @@ App.Router = Backbone.Router.extend({
     App.Views.ProductList.render()
   },
 
-  addProduct: function(userId, productId) {
-    App.Views.ProductForm.render(userId, productId)
+  addProduct: function(id, userId) {
+    App.Views.ProductForm.render(id, userId)
   },
 
   deleteProduct: function(id) {
