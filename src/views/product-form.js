@@ -59,8 +59,7 @@ var ProductFormView = Backbone.View.extend({
 
       App.Collections.products.create(formData, {
         success: function (product) {
-          console.log(product.userId);
-          App.router.navigate('/user/:userId/products', { trigger: true });
+          App.router.navigate('/user/:id/products', { trigger: true });
         }
       });
 
