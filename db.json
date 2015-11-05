@@ -11,6 +11,12 @@
       "name": "Kevin",
       "hobby": "Beard Growing",
       "img": "http://robohash.org/14eb93afa4d.png"
+    },
+    {
+      "name": "bobbo",
+      "hobby": "i fish 4 u",
+      "img": "http://robohash.org/150d59d6143.png",
+      "id": 3
     }
   ],
   "products": [
@@ -28,7 +34,7 @@
     },
     {
       "title": "jujubot",
-      "description": "I give good juju",
+      "description": "I give good juju 2",
       "img": "http://robohash.org/150d48933ff.png",
       "id": 3
     }
