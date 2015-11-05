@@ -74,7 +74,7 @@ App.Router = Backbone.Router.extend({
     })
   },
 
-  showUserProducts: function(userId) {
+  showUserProducts: function(userId, id) {
     App.Views.ProductForm.render(userId, id);
   },
 
