@@ -1,0 +1,26 @@
+<table border="1">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Hobby</th>
+      <th>Edit | Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {{#each this}}
+  <tr data-id="{{id}}">
+    <td><a href="#/user/{{id}}/products"><img src="{{img}}" id="user" alt="" width=100 height=100></a></td>
+    <td>{{name}}</td>
+    <td>{{hobby}}</td>
+    <td>
+      <a href="/#/user/{{id}}/edit">Edit</a> |
+      <a href="/#/user/{{id}}/delete">Delete</a> |
+      <a href="/#/user/{{id}}/products/add">Add New Product</a>
+    </td>
+  </tr>
+  {{/each}}
+
+  </tbody>
+</table>
