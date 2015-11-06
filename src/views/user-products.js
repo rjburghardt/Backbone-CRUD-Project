@@ -1,6 +1,6 @@
 var $ = require('jquery');
 var Backbone = require('backbone');
-var listProductsTmpl = require('../templates/user-products.hbs')
+var listProductsTmpl = require('../templates/list-products.hbs')
 
 
 //App
@@ -19,17 +19,16 @@ var ListUserProducts = Backbone.View.extend({
 
     //Get the products from the server
     productCollection.fetch().done(function (products) {
+      var productArr = [];
       products.forEach(function (product) {
-        console.log(product.userId)
-        console.log(userId)
-        console.log(typeof userId)
         if(parseInt(userId) === product.userId) {
-          _this.$el.html(listProductsTmpl(product))
-          console.log(product)
+          productArr.push(product)
+          console.log(productArr)
         } else {
           console.log('fail')
         }
       })
+      _this.$el.html(listProductsTmpl(productArr))
     });
   }
 });
