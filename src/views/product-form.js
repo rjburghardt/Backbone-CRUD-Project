@@ -29,8 +29,13 @@ var ProductFormView = Backbone.View.extend({
 
     // Display form in Update Mode
     } else {
+<<<<<<< HEAD
       var product = this.product = new Product({ id: productId, userId: userId});
 
+=======
+      var product = this.product = new Product({ userId: userId, productId: productId});
+      console.log(product.toJSON())
+>>>>>>> 58f4a53fa280d5d0d6a49b6a8c3ac0ea307c8643
       product.fetch().done(function () {
         var output = formTemplate(product.toJSON());
         _this.$el.html(output);
@@ -48,6 +53,7 @@ var ProductFormView = Backbone.View.extend({
       title: $('form.product input[name="title"]').val(),
       description: $('form.product input[name="description"]').val(),
       userId: $('form.product input[name="userId"]').val()
+
     };
 
     // Add Mode (Create Product)
@@ -55,7 +61,6 @@ var ProductFormView = Backbone.View.extend({
 
       // Only set the image on add mode
       formData.img = 'http://robohash.org/'+ Date.now().toString(16) + '.png'
-      // formData.userId = this.userId
 
       App.Collections.products.create(formData, {
         success: function (product) {
