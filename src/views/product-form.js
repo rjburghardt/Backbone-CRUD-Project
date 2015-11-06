@@ -21,7 +21,7 @@ var ProductFormView = Backbone.View.extend({
   render: function (userId, productId) {
     var _this = this;
     this.editMode = !!productId;
-    console.log(productId);
+    
     // Display form in Create Mode
     if (!this.editMode) {
       var output = formTemplate({userId: userId});
@@ -29,13 +29,9 @@ var ProductFormView = Backbone.View.extend({
 
     // Display form in Update Mode
     } else {
-<<<<<<< HEAD
-      var product = this.product = new Product({ id: productId, userId: userId});
 
-=======
       var product = this.product = new Product({ userId: userId, productId: productId});
-      console.log(product.toJSON())
->>>>>>> 58f4a53fa280d5d0d6a49b6a8c3ac0ea307c8643
+
       product.fetch().done(function () {
         var output = formTemplate(product.toJSON());
         _this.$el.html(output);
