@@ -21,7 +21,7 @@ var ProductFormView = Backbone.View.extend({
   render: function (userId, productId) {
     var _this = this;
     this.editMode = !!productId;
-
+    console.log(productId);
     // Display form in Create Mode
     if (!this.editMode) {
       var output = formTemplate({userId: userId});
@@ -29,7 +29,7 @@ var ProductFormView = Backbone.View.extend({
 
     // Display form in Update Mode
     } else {
-      var product = this.product = new Product({ userId: userId, productId: productId });
+      var product = this.product = new Product({ id: productId, userId: userId});
 
       product.fetch().done(function () {
         var output = formTemplate(product.toJSON());
@@ -59,7 +59,7 @@ var ProductFormView = Backbone.View.extend({
 
       App.Collections.products.create(formData, {
         success: function (product) {
-          App.router.navigate('/user/:id/products', { trigger: true });
+          App.router.navigate('/', { trigger: true });
         }
       });
 
