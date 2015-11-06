@@ -31,7 +31,7 @@ var ProductFormView = Backbone.View.extend({
     } else {
 
 
-      var product = this.product = new Product({ userId: userId, productId: productId});
+      var product = this.product = new Product({ userId: userId, id: productId});
       console.log(product.toJSON())
       product.fetch().done(function () {
         var output = formTemplate(product.toJSON());
