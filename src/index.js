@@ -21,6 +21,10 @@ App.Views.ProductForm = new ProductFormView;
 var ListProducts = require('./views/list-products');
 App.Views.ProductList = new ListProducts;
 
+//View: User-Product List
+var ListUserProducts = require('./views/user-products');
+App.Views.UserProducts = new ListUserProducts
+
 // App Router
 App.Router = Backbone.Router.extend({
 
@@ -33,7 +37,7 @@ App.Router = Backbone.Router.extend({
     'products(/)': 'showProducts',
     'user/:userId/products/:id/edit(/)': 'addProduct',
     'products/:id/delete(/)': 'deleteProduct',
-    'user/:id/products(/)': 'showUserProducts',
+    'users/:id/products(/)': 'showUserProducts',
     'user/:id/products/add': 'addProduct',
     '*actions': 'defaultRoute'
   },
@@ -60,8 +64,8 @@ App.Router = Backbone.Router.extend({
     App.Views.ProductList.render()
   },
 
-  addProduct: function(userId, productId) {
-    App.Views.ProductForm.render(userId, productId)
+  addProduct: function(id, userId) {
+    App.Views.ProductForm.render(id, userId)
   },
 
   deleteProduct: function(id) {
@@ -74,8 +78,8 @@ App.Router = Backbone.Router.extend({
     })
   },
 
-  showUserProducts: function(userId, id) {
-    App.Views.ProductForm.render(userId, id);
+  showUserProducts: function(userId) {
+    App.Views.UserProducts.render(userId);
   },
 
   defaultRoute: function(actions) {
